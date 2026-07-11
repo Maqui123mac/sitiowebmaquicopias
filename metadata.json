@@ -1,0 +1,6 @@
+{
+  "name": "Copias & Impresiones",
+  "description": "Sistema de catálogo, cotización y gestión de pedidos para Copias e Impresiones en tonos rosa y blanco.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

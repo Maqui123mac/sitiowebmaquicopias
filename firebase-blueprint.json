@@ -1,0 +1,67 @@
+{
+  "entities": {
+    "Order": {
+      "title": "Order",
+      "description": "Un pedido de copias e impresiones hecho por un cliente.",
+      "type": "object",
+      "properties": {
+        "customerName": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "customerPhone": {
+          "type": "string",
+          "maxLength": 20
+        },
+        "customerEmail": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 100
+        },
+        "serviceType": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "options": {
+          "type": "object",
+          "properties": {
+            "copies": { "type": "number" },
+            "paperType": { "type": "string", "maxLength": 50 },
+            "size": { "type": "string", "maxLength": 50 },
+            "colorMode": { "type": "string", "maxLength": 20 },
+            "sides": { "type": "string", "maxLength": 20 },
+            "instructions": { "type": "string", "maxLength": 500 }
+          }
+        },
+        "fileName": {
+          "type": "string",
+          "maxLength": 255
+        },
+        "fileSize": {
+          "type": "string",
+          "maxLength": 50
+        },
+        "totalPrice": {
+          "type": "number"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Pendiente", "En proceso", "Listo para entrega", "Entregado", "Cancelado"]
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string"
+        }
+      },
+      "required": ["customerName", "customerPhone", "customerEmail", "serviceType", "totalPrice", "status", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "Colección global de pedidos de la tienda en Queréndaro."
+    }
+  }
+}
