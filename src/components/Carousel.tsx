@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Printer, Sparkles, Layers } from 'lucide-react';
 
-const imgHero = "/src/assets/images/anime_girl_printing_1783665874151.jpg";
-const imgPrinting = "/src/assets/images/anime_photo_print_1783665032007.jpg";
-const imgCards = "/src/assets/images/anime_cards_print_1783665043165.jpg";
+const imgHero = "https://copyimpresmaqui.netlify.app/src/assets/images/anime_girl_printing_1783665874151.jpg";
+const imgPrinting = "https://copyimpresmaqui.netlify.app/src/assets/images/anime_photo_print_1783665032007.jpg";
+const imgCards = "https://copyimpresmaqui.netlify.app/src/assets/images/anime_cards_print_1783665043165.jpg";
 
 interface CarouselSlide {
   image: string;
